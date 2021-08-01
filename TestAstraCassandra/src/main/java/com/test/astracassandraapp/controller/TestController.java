@@ -15,7 +15,6 @@ public class TestController {
 
 	@GetMapping("/test")
 	public void testDBOps() {
-		// template.insert(new Student(1, "Soumav", 30));
 		repo.save(new Student(2, "Soumav2", 30));
 		System.out.println("Saved!");
 	}
