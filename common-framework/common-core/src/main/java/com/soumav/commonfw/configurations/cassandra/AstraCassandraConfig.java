@@ -7,11 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.cassandra.CqlSessionBuilderCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.data.cassandra.core.CassandraTemplate;
-
-import com.datastax.oss.driver.api.core.CqlSession;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -33,25 +29,6 @@ public class AstraCassandraConfig {
 
 	@Value("${astra.datastax.configzip.path}")
 	private String astraConfigzipPath;
-
-	@Value("${cassandra.keyspacename}")
-	String keySpaceName;
-
-	@Bean(name = "astraCassandraCqlSession")
-	@Primary
-	public CqlSession cqlSession() {
-		CqlSession session = null;
-		try {
-			session = CqlSession.builder()
-					.withCloudSecureConnectBundle(Paths.get(ClassLoader.getSystemResource(astraConfigzipPath).toURI()))
-					.withKeyspace(keySpaceName).withAuthCredentials(clientId, clientSecret).build();
-		} catch (URISyntaxException e) {
-			log.error("Error occured while creating cqlSession: {}", e.toString());
-		} catch (Exception e) {
-			log.error("Error occured while creating cqlSession: {}", e.toString());
-		}
-		return session;
-	}
 
 	@Bean
 	public CqlSessionBuilderCustomizer sessionBuilderCustomizer() {

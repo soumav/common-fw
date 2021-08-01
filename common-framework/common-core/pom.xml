@@ -6,7 +6,9 @@
 		<groupId>com.soumav</groupId>
 		<artifactId>common-framework</artifactId>
 		<version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
+	<packaging>jar</packaging>
 	<artifactId>common-core</artifactId>
 	<name>common-core</name>
 </project>
