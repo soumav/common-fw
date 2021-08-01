@@ -1,0 +1,2 @@
+com\soumav\commonfw\configurations\spring\CommonConfig.class
+com\soumav\commonfw\configurations\cassandra\AstraCassandraConfig.class
