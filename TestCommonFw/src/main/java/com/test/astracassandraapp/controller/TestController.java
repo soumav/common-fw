@@ -1,11 +1,17 @@
 package com.test.astracassandraapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.test.astracassandraapp.model.Student;
 import com.test.astracassandraapp.repo.TestRepository;
+
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 @RestController
 public class TestController {
@@ -13,10 +19,12 @@ public class TestController {
 	@Autowired
 	TestRepository repo;
 
-	@GetMapping("/test")
-	public void testDBOps() {
-		repo.save(new Student(2, "Soumav2", 30));
-		System.out.println("Saved!");
+	@ApiOperation(value = "Create Student", notes = "This method creates a new Student")
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Saved Successfully!", response = String.class) })
+	@GetMapping("/createStudent")
+	public ResponseEntity<String> testDBOps(Student stud) {
+		repo.save(stud);
+		return ResponseEntity.status(HttpStatus.OK).body("Saved Successfully!");
 	}
 
 }

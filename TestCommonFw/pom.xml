@@ -13,8 +13,8 @@
 	<groupId>com.test.astracassandraapp</groupId>
 	<artifactId>TestAstraCassandra</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>TestAstraCassandra</name>
-	<description>Test Astra Cassandra</description>
+	<name>TestCommonFw</name>
+	<description>Test Common Fw</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
