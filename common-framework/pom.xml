@@ -16,7 +16,7 @@
 	<packaging>pom</packaging>
 
 	<name>common-framework</name>
-	<url>http://35.207.223.31:8081/</url>
+	<url>http://35.207.223.31:8081/service/rest/repository/browse/commonfw-hosted-release/</url>
 	<developers>
 		<developer>
 			<id>Soumav</id>
@@ -24,7 +24,9 @@
 			<url>http://www.thesobersloth.in</url>
 		</developer>
 	</developers>
-
+	<scm>
+    <url>https://github.com/thesobersloth/common-fw_with_examples/tree/main/common-framework</url>
+  </scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>

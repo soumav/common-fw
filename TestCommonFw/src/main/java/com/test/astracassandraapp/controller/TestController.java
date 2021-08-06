@@ -9,18 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.test.astracassandraapp.model.Student;
 import com.test.astracassandraapp.repo.TestRepository;
 
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
-
 @RestController
 public class TestController {
 
 	@Autowired
 	TestRepository repo;
 
-	@ApiOperation(value = "Create Student", notes = "This method creates a new Student")
-	@ApiResponses(value = { @ApiResponse(code = 200, message = "Saved Successfully!", response = String.class) })
+//	@ApiOperation(value = "Create Student", notes = "This method creates a new Student")
+//	@ApiResponses(value = { @ApiResponse(code = 200, message = "Saved Successfully!", response = String.class) })
 	@GetMapping("/createStudent")
 	public ResponseEntity<String> testDBOps(Student stud) {
 		repo.save(stud);

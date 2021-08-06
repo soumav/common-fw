@@ -1,4 +1,4 @@
-package com.soumav.commonfw.exceptions;
+package com.commonfw.exceptions;
 
 import org.springframework.http.HttpStatus;
 
