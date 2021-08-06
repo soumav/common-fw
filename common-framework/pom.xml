@@ -10,7 +10,7 @@
 		<relativePath />
 	</parent>
 
-	<groupId>com.soumav</groupId>
+	<groupId>com.commonfw</groupId>
 	<artifactId>common-framework</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>

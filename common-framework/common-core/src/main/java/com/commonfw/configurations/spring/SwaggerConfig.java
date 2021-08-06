@@ -1,4 +1,4 @@
-package com.soumav.commonfw.configurations.spring;
+package com.commonfw.configurations.spring;
 
 import java.util.Collections;
 

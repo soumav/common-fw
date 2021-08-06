@@ -1,4 +1,4 @@
-package com.soumav.commonfw.configurations.cassandra;
+package com.commonfw.configurations.cassandra;
 
 import java.net.URISyntaxException;
 import java.nio.file.Paths;
@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 
- * @author Soumav
+ * @author FlashStub Team
  *
  */
 @Configuration
