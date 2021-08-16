@@ -25,7 +25,7 @@
 		</developer>
 	</developers>
 	<scm>
-		<url>https://github.com/thesobersloth/common-fw_with_examples/tree/main/common-framework</url>
+		<url>https://github.com/thesobersloth/common-fw/tree/main/common-framework</url>
 	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
