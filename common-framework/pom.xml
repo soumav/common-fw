@@ -78,7 +78,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<!-- SLF4J -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -111,13 +111,25 @@
 			<artifactId>commons-lang3</artifactId>
 		</dependency>
 
-		<!-- Guava -->
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>${com.google.guava.version}</version>
-		</dependency>
 	</dependencies>
+
+	<dependencyManagement>
+		<!-- Note: Dependencies declared inside <dependencyManagement> section 
+			will not be visible to the inheriting/child projects unless explicitly added 
+			to their respective poms. The version will still be managed here/centrally 
+			(Not only version but other attributes declared under the dependency as well 
+			such as packaging type, scope etc.). The child projects need to add it (without 
+			the need to mention the version explicitly. They still can override the version 
+			if needed.). This can reduce inclusion of additional lines in the child poms -->
+		<dependencies>
+			<!-- Guava -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${com.google.guava.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<distributionManagement>
 		<repository>
