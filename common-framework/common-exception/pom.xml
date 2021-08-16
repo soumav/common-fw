@@ -10,4 +10,5 @@
 	</parent>
 	<packaging>jar</packaging>
 	<artifactId>common-exception</artifactId>
+	<name>common-exception</name>
 </project>
