@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.commonfw</groupId>
+		<artifactId>common-framework</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<packaging>jar</packaging>
+	<artifactId>common-cloud</artifactId>
+	<name>common-cloud</name>
+	<properties>
+		<spring-cloud-starter-netflix-hystrix>2.2.9.RELEASE</spring-cloud-starter-netflix-hystrix>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+			<version>${spring-cloud-starter-netflix-hystrix}</version>
+		</dependency>
+	</dependencies>
+</project>
