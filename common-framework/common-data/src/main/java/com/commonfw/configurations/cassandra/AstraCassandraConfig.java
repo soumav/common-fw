@@ -31,6 +31,7 @@ public class AstraCassandraConfig {
 	private String astraConfigzipPath;
 
 	@Bean
+	//@ConditionalOnProperty
 	public CqlSessionBuilderCustomizer sessionBuilderCustomizer() {
 		return builder -> {
 			try {
